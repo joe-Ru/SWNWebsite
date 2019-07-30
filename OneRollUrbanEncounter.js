@@ -113,5 +113,3 @@ urbanFeatures();
 
 }
 
-main();
-

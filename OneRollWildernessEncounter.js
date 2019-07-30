@@ -112,5 +112,4 @@ hostileCreatures();
 relevantFeature();
 
 }
-main();
 

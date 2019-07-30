@@ -1,4 +1,5 @@
 main = () => {
+    var reroll1d4 = false;
     backGround = () => {
         var backGroundList = [
         'The local under class or poorest natives',
@@ -11,7 +12,10 @@ main = () => {
         let k = Math.floor(Math.random() *6);
         output = backGroundList[k];
         document.getElementById("backGround").innerHTML = "Background: " + output;
-    
+        
+        if(output == (backGroundList[4] | backGroundList[5])) {
+            reroll1d4 = true;
+        }    
     }
 
 society = () => {
@@ -53,16 +57,23 @@ biggestProblem = () => {
 }
 
 age = () => {
+    rolling = () => {
     var ageList = [
     'Unusually young or old for their role',
     'Young adult',
     'Mature prime',
-    'Middle-aged or elderly'
-    ];
-    
+    'Middle-aged or elderly'];
+
     let k = Math.floor(Math.random() *4);
-    output = ageList[k]
+    output = ageList[k];
+
+    if(reroll1d4 == true) {
+        age();
+    }
     document.getElementById("age").innerHTML = "Age: " + output;
+}
+rolling();
+
 }
 
 greatestDesire = () => {
