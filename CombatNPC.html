@@ -32,13 +32,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
-    <a href="CombatNPC.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">NPC's for Combat</a>
   </div>
 </div>
 
 <!-- Header -->
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">One Roll Urban Encounter</h1>
+  <h1 class="w3-margin w3-jumbo">Combat NPC</h1>
   <p class="w3-xlarge"></p>
   
 </header>
@@ -47,15 +46,32 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Click The Button Below To Obtain a One Roll Wilderness Encounter</h1>
+      <h1>Click The Button Below To Obtain an NPC Made for Combat</h1>
       <h5 class="w3-padding-32"></h5>
-      <button class="example" onclick="main()">Generate</button>
-      <p id="weather"></p>
-      <p id="basicNature"></p>
-      <p id="friendlyCreatures"></p>
-      <p id="initialEncounter"></p>
-      <p id="hostileCreatures"></p>
-      <p id="relevantFeature"></p>
+      <h5 class="w3-padding-32">Description goes here
+      </h5>
+        <select id="enemy">
+          <option value="Tier1">Tier1</option>
+          <option value="Tier2">Tier2</option>
+          <option value="Tier3">Tier3</option>
+          <option value="Tier4">Tier4</option>
+          <p id="Tier1"></p>
+          <p id="Tier2"></p>
+          <p id="Tier3"></p>
+          <p id="Tier4"></p>
+        </select>
+        <br><br>
+        <button type="generate" onclick="userInput();">Generate</button>
+      </form>
+      <p id="HP"></p>
+      <p id="Armor Class"></p>
+      <p id="Atk"></p>
+      <p id="Damage"></p>
+      <p id="Weapon"></p>
+      <p id="Move"></p>
+      <p id="Morale"></p>
+      <p id="Skills"></p>
+      <p id="Saves"></p>
 
       <p class="w3-text-grey"></p> <!-- Write about here-->
     </div>
@@ -101,6 +117,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   }
 }
 </script>
-<script src="OneRollWildernessEncounter.js"></script>
+<script src="CombatNPC.js"></script>
 </body>
 </html>

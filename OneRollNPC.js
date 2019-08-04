@@ -1,21 +1,28 @@
 main = () => {
-    var reroll1d4 = false;
     backGround = () => {
-        var backGroundList = [
-        'The local under class or poorest natives',
-        'Common laborers or cube workers', 
-        'Aspiring bourgeoise or upper class', 
-        'The elite of this society', 
-        'Minority or foreigners; reroll on 1d4',
-        'Offworlders or exotics; reroll on 1d4'];
+        var backGroundList = [ 
+        ' The local under class or poorest natives ',
+        ' Common laborers or cube workers ', 
+        ' Aspiring bourgeoise or upper class ', 
+        ' The elite of this society ', 
+        ' Minority or foreigners; ', //roll 1d4
+        ' Offworlders or exotics; ']; //roll 1d4
     
-        let k = Math.floor(Math.random() *6);
+        rollDice = (numberOfDice) => {
+            return Math.floor(Math.random() * numberOfDice);
+        }
+    
+        let k = rollDice(6);
         output = backGroundList[k];
-        document.getElementById("backGround").innerHTML = "Background: " + output;
         
-        if(output == (backGroundList[4] | backGroundList[5])) {
-            reroll1d4 = true;
-        }    
+        if ((output == backGroundList[4]) || (output == backGroundList[5])) {
+            let v = rollDice(4);
+            newOutput = backGroundList[v];
+            document.getElementById("backGround").innerHTML = "Background: " + output + newOutput;
+        }
+        else {
+            document.getElementById("backGround").innerHTML = "Background: " + output;
+        }
     }
 
 society = () => {
@@ -57,7 +64,6 @@ biggestProblem = () => {
 }
 
 age = () => {
-    rolling = () => {
     var ageList = [
     'Unusually young or old for their role',
     'Young adult',
@@ -67,12 +73,7 @@ age = () => {
     let k = Math.floor(Math.random() *4);
     output = ageList[k];
 
-    if(reroll1d4 == true) {
-        age();
-    }
     document.getElementById("age").innerHTML = "Age: " + output;
-}
-rolling();
 
 }
 
@@ -135,5 +136,3 @@ greatestDesire();
 obviousTrait();
 
 }
-// export { backGroundRoll, societyRoll, biggestProblemRoll, ageRoll, vargreatestDesire, obviousTraitRoll };
-
