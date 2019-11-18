@@ -82,7 +82,7 @@ userInput = () => {
         postAtkDamage.innerHTML = "Atk bonus: +1";
 
         var postArmorClass = document.getElementById("Armor Class");
-        postArmorClass.innerHTML = "Armor Class: 12";
+        postArmorClass.innerHTML = "Armor Class: 20";
 
         var postDamage = document.getElementById("Damage");
         weaponRolled = () => {
