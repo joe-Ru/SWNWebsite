@@ -1,105 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
-</style>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>TableTop Dice Roller</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
 <body>
-
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="WebsiteMain.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="OneRollNPC.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">One Roll NPC</a>
-    <a href="OneRollPatron.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">One Roll Patrons</a>
-    <a href="OneRollUrbanEncounter.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">One Roll Urban Encounter</a>
-    <a href="OneRollWildernessEncounter.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">One Roll Wilderness Encounter</a>
-    <a href="CombatNPC.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Combat NPC</a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">One Roll Urban Encounter</h1>
-  <p class="w3-xlarge"></p>
-  
-</header>
-
-<!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Click The Button Below To Obtain a One Roll Urban Encounter</h1>
-      <h5 class="w3-padding-32"></h5>
-      <button class="example" onclick="main()">Generate</button>
-      <p id="venue"></p>
-      <p id="pcInvolvement"></p>
-      <p id="natureOfEvent"></p>
-      <p id="conflict"></p>
-      <p id="antagonist"></p>
-      <p id="urbanFeatures"></p>
-
-      <p class="w3-text-grey"></p> <!-- Write about here-->
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Undefined()<span class="logo_colour"> Dice Roller</span></a></h1>
+          <h2></h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on 
+          TODO: Put a drop down menu here-->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="OneRollNPC.html">One Roll NPC</a></li>
+          <li><a href="OneRollPatron.html">One Roll Patron</a></li>
+          <li><a href="OneRollUrbanEncounter.html">One Roll Urban Encounter</a></li>
+          <li><a href="OneRollWildernessEncounter.html">One Roll Wilderness Encounter</a></li>
+        </ul>
+      </div>
     </div>
-
-    <div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i> <!-- TODO: place a dice logo here-->
+    <div id="site_content">
+      <div class="sidebar">
+        <h1>Latest News</h1>
+        <h4>New Website Launched</h4>
+        <h5>January 1st, 2010</h5>
+        <p>2010 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+        <h1>Useful Links</h1>
+        <ul>
+          <li><a href="#">link 1</a></li>
+          <li><a href="#">link 2</a></li>
+          <li><a href="#">link 3</a></li>
+          <li><a href="#">link 4</a></li>
+        </ul>
+        <h1>Search</h1>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+      </div>
+      <div id="content">
+        <h1>Welcome to the night_sky_2 template</h1>
+        <p>This standards compliant, simple, fixed width website template is released as an 'open source' design (under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>), which means that you are free to download and use it for anything you want (including modifying and amending it). All I ask is that you leave the 'design from HTML5webtemplates.co.uk' link in the footer of the template, but other than that...</p>
+        <p>This template is written entirely in <strong>HTML5</strong> and <strong>CSS</strong>, and can be validated using the links in the footer.</p>
+        <p>You can view more free HTML5 web templates <a href="http://www.html5webtemplates.co.uk">here</a>.</p>
+        <p>This template is a fully functional 5 page website, with an <a href="examples.html">examples</a> page that gives examples of all the styles available with this design.</p>
+        <h2>Browser Compatibility</h2>
+        <p>This template has been tested in the following browsers:</p>
+        <ul>
+          <li>Internet Explorer 8</li>
+          <li>FireFox 3</li>
+          <li>Google Chrome 13</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</div>
-
-<!-- Second Grid -->
-<!-- 
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-third w3-center">
-      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
-    </div>
-
-    <div class="w3-twothird">
-      <h1>Lorem Ipsum</h1>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div id="footer">
+      <p><a href="index.html">Home</a> | <a href="examples.html">Examples</a> | <a href="page.html">A Page</a> | <a href="another_page.html">Another Page</a> | <a href="contact.html">Contact Us</a></p>
+      <p>Copyright &copy; night_sky_2 | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">Website templates</a></p>
     </div>
   </div>
-</div>-->
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
-  <div class="w3-xlarge w3-padding-32">
- </div>
-</footer>
-
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
- function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-<script src="OneRollUrbanEncounter.js"></script>
 </body>
 </html>
