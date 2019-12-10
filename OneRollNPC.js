@@ -54,7 +54,7 @@ biggestProblem = () => {
     'They have a persistent sickness',
     'They hate their job or life situation',
     'Someone dangerous is targeting them',
-    'They’re pursuing a disastrous purpose',
+    'They are pursuing a disastrous purpose',
     'They have no problems worth mentioning',
     ];
 
