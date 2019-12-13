@@ -17,12 +17,12 @@ weather = () => {
 basicNature = () => {
     var basicNatureList = ["Attack by pack of hostiles",
         "Ambush by single lone hostile",
-        "Meet people who don’t want to be met",
+        "Meet people who don't want to be met",
         "Encounter people in need of aid",
         "Encounter hostile creatures",
         "Nearby feature is somehow dangerous",
         "Nearby feature promises useful loot",
-        "Meet hostiles that aren’t immediately so"]
+        "Meet hostiles that aren't immediately so"]
 
     let k = Math.floor(Math.random() *8);
     output = basicNatureList[k]
@@ -91,7 +91,7 @@ relevantFeature = () => {
         "Ruins of a ghost town or lost hamlet",
         "Hunting cabin with necessities",
         "Ill-tended graveyard of a lost family stead",
-        "Narrow pass that’s easily blocked",
+        "Narrow pass that's easily blocked",
         "Dilapidated resort building",
         "Remote government monitoring outpost",
         "Illicit substance farm or processing center",
