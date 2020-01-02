@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 export default ({children}) => 
     <div>
-  <title>TableTop Dice Roller</title>
+  <title>SWN NPC Generator</title>
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta httpEquiv="content-type" content="text/html; charset=windows-1252" />
@@ -33,7 +33,7 @@ export default ({children}) =>
             <Link to="/CombatNPC/">Combat NPC</Link>
           </li>
           <li>
-            <a href="OneRollNPC.html">One Roll NPC</a>
+            <Link to="/OneRollNPC/">One Roll NPC</Link>
           </li>
           <li>
             <a href="OneRollPatron.html">One Roll Patron</a>
