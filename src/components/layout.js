@@ -36,15 +36,13 @@ export default ({children}) =>
             <Link to="/OneRollNPC/">One Roll NPC</Link>
           </li>
           <li>
-            <a href="OneRollPatron.html">One Roll Patron</a>
+            <Link to="/OneRollPatron">One Roll Patron</Link>
           </li>
           <li>
-            <a href="OneRollUrbanEncounter.html">One Roll Urban Encounter</a>
+            <Link to="/UrbanEncounter/">One Roll Urban Encounter</Link>
           </li>
           <li>
-            <a href="OneRollWildernessEncounter.html">
-              One Roll Wilderness Encounter
-            </a>
+            <Link to="/Wilderness/">Wilderness Encounter</Link>
           </li>
         </ul>
       </div>

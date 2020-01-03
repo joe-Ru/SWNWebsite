@@ -2,14 +2,14 @@ import React from "react"
 import Layout from "../components/layout"
 
 
-function clicked() {
-  console.log("This was clicked");
+class CombatNPC extends React.Component {
+    render() {
+       return <div>
+            <Layout>
+
+            </Layout>
+        </div>
+    }
 }
 
-export default () => <Layout>
-              
-  <div>
-    <h1>Click The Button Below To Obtain an NPC Made for Combat</h1>
-  </div>
-            </Layout>
-
+export default CombatNPC
