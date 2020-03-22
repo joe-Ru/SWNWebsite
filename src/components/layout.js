@@ -15,7 +15,7 @@ export default ({children}) =>
         <div id="logo_text">
           {/* class="logo_colour", allows you to change the colour of the text */}
           <h1>
-            <a href="index.html">
+            <a href="">
               SWN<span className="logo_colour"> Random Encounter Generator</span>
             </a>
           </h1>
