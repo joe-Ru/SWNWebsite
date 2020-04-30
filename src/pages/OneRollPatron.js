@@ -136,8 +136,9 @@ class OneRollPatron extends React.Component {
     render() {
        return <div>
             <Layout>
-            <h1>Click The Button Below To Obtain a Simple NPC</h1>
-            <button onClick={ event => this.clicked() }> Generate a simple NPC </button> 
+            <h1>Click The Button Below To Obtain a Patron NPC</h1>
+            <p>This NPC is designed to give the players a job</p>
+            <button onClick={ event => this.clicked() }> Generate </button> 
         <p>Patron trustworthiness {this.state.trust}</p>    
         <p>Basic challenge of job: {this.state.challengeOfJob}</p>    
         <p>Counter Force: {this.state.counterForce}</p>    

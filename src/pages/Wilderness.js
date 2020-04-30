@@ -131,8 +131,8 @@ class Wilderness extends React.Component {
     render() {
        return <div>
             <Layout>
-            <h1>Click the button below to generate a wilderness encounter</h1>
-            <button onClick={ event => this.clicked() }> Generate an urban encounter </button> 
+            <h1>Click the button below to generate a Wilderness encounter</h1>
+            <button onClick={ event => this.clicked() }> Generate a Wilderness encounter </button> 
         <p>Weather and lighting of the event: {this.state.weather}</p>    
         <p>Basic nature of the encounter: {this.state.basicNature}</p>    
         <p>Types of friendly creatures: {this.state.friendlyCreatures}</p>    
