@@ -1,48 +1,54 @@
-import React from "react"
+import React, { useState, useRef, useEffect } from "react"
 import Layout from "../components/layout"
 
 
+class CombatNPC extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: 'Tier1' };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
+  handleChange(event) { this.setState({ value: event.target.value }); }
+  handleSubmit(event) {
 
-
-
-class CombatNPC extends React.Component {   
-   
-    render() {
-       return <div>
-         <Layout>
-           <div className="container">
-             <div className="row">
-               <div className="col-sm-12">
-
-                 <form onSubmit={this.handleFormSubmit}>
-                   <div className="radio">
-                     <label>
-                       <input type="radio" value="option1" checked={this.state.selectedOption === 'option1'} onChange={this.handleOptionChange} />
-                       Option 1
-                     </label>
-                   </div>
-                   <div className="radio">
-                     <label>
-                       <input type="radio" value="option2" checked={this.state.selectedOption === 'option2'} onChange={this.handleOptionChange}/>
-                       Option 2
-                     </label>
-                   </div>
-                   <div className="radio">
-                     <label>
-                       <input type="radio" value="option3" checked={this.state.selectedOption === 'option3'} onChange={this.handleOptionChange}/>
-                       Option 3
-                     </label>
-                   </div>
-                   <button className="btn btn-default" type="submit">Save</button>
-                 </form>
-
-               </div>
-             </div>
-           </div>
-         </Layout>
-       </div>
+    if (this.state.value == 'Tier1') {
+      console.log("Tier 1 works");
     }
+
+    if (this.state.value =='Tier2') {
+      console.log("Tier 2 works");
+    }
+
+    if (this.state.value =='Tier3') {
+      console.log("Tier 3 works");
+    }
+    
+    event.preventDefault();
+    // alert('Your favorite flavor is: ' + this.state.value);
+    // event.preventDefault();
+  }
+
+  render() {
+    return (
+      <Layout>
+        <p>Select a Combat NPC from the drop down menu</p>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Pick your favorite flavor:
+          <select value={this.state.value} onChange={this.handleChange}>
+              <option value="Tier1">Tier 1</option>
+              <option value="Tier2">Tier 2</option>
+              <option value="Tier3">Tier 3</option>
+            </select>
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+      </Layout>
+    );
+  }
 }
+
 
 export default CombatNPC
