@@ -5,7 +5,10 @@ import Layout from "../components/layout"
 class CombatNPC extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: 'Tier1' };
+    this.state = {
+      value: 'Tier1',
+      
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -14,17 +17,17 @@ class CombatNPC extends React.Component {
   handleSubmit(event) {
 
     if (this.state.value == 'Tier1') {
-      console.log("Tier 1 works");
+
     }
 
-    if (this.state.value =='Tier2') {
+    if (this.state.value == 'Tier2') {
       console.log("Tier 2 works");
     }
 
-    if (this.state.value =='Tier3') {
+    if (this.state.value == 'Tier3') {
       console.log("Tier 3 works");
     }
-    
+
     event.preventDefault();
     // alert('Your favorite flavor is: ' + this.state.value);
     // event.preventDefault();
